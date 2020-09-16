@@ -1,7 +1,7 @@
 ## Steps to reproduce
 
  1. ```sh
-    msbuild -restore -p:Configuration=Release -t:Install MobileAppFormsTabbed1.Android/MobileAppFormsTabbed1.Android.csproj
+    msbuild -restore -p:Configuration=Release -t:Install AndroidAppSingleView1/AndroidAppSingleView1.csproj
     ```
  2. ```sh
     adb shell setprop debug.mono.log gref
@@ -14,10 +14,10 @@
     while true 
     do
     	adb logcat -c -G 16M
-    	adb shell am start -n com.contoso.mobileappformstabbed1/crc64fe9ae7d7f94611c6.MainActivity
-    	sleep 7
-    	adb shell "ps | grep -q com.contoso.mobileappformstabbed1" || break;
-    	adb shell am force-stop com.contoso.mobileappformstabbed1
+    	adb shell am start -n com.contoso.androidappsingleview1/crc64ec9f16653b78c539.MainActivity
+    	sleep 8
+    	adb shell "ps | grep -q com.contoso.androidappsingleview1" || break;
+    	adb shell am force-stop com.contoso.androidappsingleview1
     done
     adb logcat -d
     ```
