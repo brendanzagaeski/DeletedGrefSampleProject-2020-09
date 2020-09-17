@@ -1,3 +1,0 @@
-﻿MONO_LOG_LEVEL=debug
-MONO_LOG_MASK=gc
-MONO_GC_PARAMS=nursery-size=32k
